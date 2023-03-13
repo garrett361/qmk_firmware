@@ -1,10 +1,11 @@
 #include QMK_KEYBOARD_H
 
 #define MAC_RDO SCMD(KC_Z)
+#define MAC_UND LCMD(KC_Z)
+#define MAC_ALL LCMD(KC_A)
 #define MAC_PST LCMD(KC_V)
 #define MAC_CPY LCMD(KC_C)
 #define MAC_CUT LCMD(KC_X)
-#define MAC_UND LCMD(KC_Z)
 
 enum layers {QWERTY, NUM, NAV, SYM_1, SYM_2, MOUSE, MISC};
 
@@ -56,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [MOUSE] = LAYOUT_garrett361(
         _______,    _______,    _______,    _______,    _______,                               _______,    MAC_UND,    MAC_RDO,    _______,    _______,
         _______,    _______,    _______,    _______,    _______,                               KC_MS_L,    KC_MS_D,    KC_MS_U,    KC_MS_R,    _______,
-        _______,    _______,    _______,    _______,    _______,                               _______,    MAC_CPY,    MAC_PST,    MAC_CUT,    _______,
+        _______,    _______,    _______,    _______,    _______,                               MAC_ALL,    MAC_CPY,    MAC_PST,    MAC_CUT,    _______,
                                 _______,    _______,    _______,                               KC_BTN3,    KC_BTN2,    KC_BTN1
     ),
     [MISC] = LAYOUT_garrett361(
