@@ -15,6 +15,9 @@
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define TAPPING_FORCE_HOLD
 
+// Register holds when another key is pressed and released while a mod is held.
+#define PERMISSIVE_HOLD
+
 // Hold both shifts for caps word.
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
@@ -30,6 +33,7 @@
 #undef MOUSEKEY_TIME_TO_MAX
 #define MOUSEKEY_TIME_TO_MAX    64
 
-//
 #define TAP_CODE_DELAY 0
 #define TAPPING_TOGGLE 5
+
+#define CAPS_WORD_IDLE_TIMEOUT  2000 // Two seconds.
