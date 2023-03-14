@@ -46,12 +46,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [SYM_1] = LAYOUT_garrett361(
         _______,    KC_PPLS,    KC_PEQL,    KC_PMNS,    KC_PAST,                               _______,    _______,    _______,    _______,    _______,
         KC_UNDS,    KC_COLN,    KC_LPRN,    KC_RPRN,    KC_LCBR,                               _______,    _______,    _______,    _______,    _______,
-        _______,    KC_EXLM,    KC_LBRC,    KC_RBRC,    KC_RCBR,                               _______,    _______,    _______,    _______,    _______,
+        _______,    KC_GRV,    KC_LBRC,    KC_RBRC,    KC_RCBR,                               _______,    _______,    _______,    _______,    _______,
                                 _______,    _______,    _______,                               _______,    _______,    _______
     ),
     [SYM_2] = LAYOUT_garrett361(
         _______,    KC_PERC,    KC_CIRC,    KC_DLR,     _______,                               _______,    _______,    _______,    _______,    _______,
-        KC_AT,      KC_SCLN,    KC_HASH,    KC_GRV,     KC_TILD,                               _______,    _______,    _______,    _______,    _______,
+        KC_AT,      KC_SCLN,    KC_HASH,    KC_EXLM,     KC_TILD,                               _______,    _______,    _______,    _______,    _______,
         _______,    _______,    KC_PIPE,    KC_BSLS,    _______,                               _______,    _______,    _______,    _______,    _______,
                                 _______,    _______,    _______,                               _______,    LT(MISC, KC_NO),    _______
     ),
@@ -59,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,    _______,    _______,    _______,    _______,                               _______,    MAC_UND,    MAC_RDO,    _______,    _______,
         _______,    _______,    _______,    _______,    _______,                               KC_MS_L,    KC_MS_D,    KC_MS_U,    KC_MS_R,    _______,
         _______,    _______,    _______,    _______,    _______,                               MAC_ALL,    MAC_CPY,    MAC_PST,    MAC_CUT,    _______,
-                                _______,    _______,    _______,                               KC_BTN3,    KC_BTN2,    KC_BTN1
+                                _______,    _______,    _______,                               KC_BTN3,    KC_BTN1,    KC_BTN2
     ),
     [MISC] = LAYOUT_garrett361(
         _______,    _______,    _______,    _______,    _______,                               _______,    _______,    _______,    _______,    _______,
