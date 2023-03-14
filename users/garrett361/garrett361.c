@@ -1,4 +1,5 @@
 #include QMK_KEYBOARD_H
+#include "features/achordion.h"
 
 #define MAC_RDO SCMD(KC_Z)
 #define MAC_UND LCMD(KC_Z)
@@ -66,4 +67,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,    _______,    _______,    _______,    _______,                               _______,    _______,    _______,    _______,    _______,
                                 _______,    _______,    _______,                               _______,    _______,    QK_BOOT
     ),
+};
+
+bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+  if (!process_achordion(keycode, record))  {return false;}
+  return true;
+};
+
+void matrix_scan_user(void) {
+  achordion_task();
 };

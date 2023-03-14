@@ -9,3 +9,5 @@ COMMAND_ENABLE = no
 KEY_OVERRIDE_ENABLE = yes
 
 INTROSPECTION_KEYMAP_C = garrett361.c
+
+SRC += features/achordion.c
