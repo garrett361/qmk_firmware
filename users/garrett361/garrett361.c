@@ -20,7 +20,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [NAV] = LAYOUT_garrett361(
         _______,    _______,    _______,    _______,    _______,                               KC_HOME,    KC_PGDN,    KC_PGUP,    KC_END,     _______,
         _______,    _______,    _______,    _______,    _______,                               KC_LEFT,    KC_DOWN,    KC_UP,      KC_RGHT,    KC_TILD,
-        _______,    _______,    _______,    _______,    _______,                               KC_PIPE,    KC_PERC,    KC_CIRC,    KC_DLR,     _______,
+        _______,    _______,    _______,    _______,    _______,                               KC_PIPE,    KC_PERC,    KC_CIRC,    KC_DLR,     CW_TOGG,
                                 _______,    _______,    _______,                               _______,    _______,    _______
     ),
     [SYM_1] = LAYOUT_garrett361(
