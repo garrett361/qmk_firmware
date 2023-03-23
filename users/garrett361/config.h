@@ -33,7 +33,7 @@
 #define TAP_CODE_DELAY 0
 #define TAPPING_TOGGLE 5
 
-#define CAPS_WORD_IDLE_TIMEOUT  3000
+#define CAPS_WORD_IDLE_TIMEOUT  1500
 
 
 // Bilateral Combinations, as implemented by https://github.com/qmk/qmk_firmware/compare/master...sunaku:miryoku_bilateral#files_bucket
