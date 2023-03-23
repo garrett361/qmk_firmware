@@ -13,20 +13,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [NUM] = LAYOUT_garrett361(
         _______,    _______,    _______,    _______,    _______,                               KC_HASH,    KC_7,       KC_8,       KC_9,    _______,
-        _______,    _______,    _______,    _______,    _______,                               KC_GRV,     KC_4,       KC_5,       KC_6,    KC_UNDS,
+        _______,    _______,    _______,    _______,    _______,                               KC_GRV,     KC_4,       KC_5,       KC_6,    CW_TOGG,
         _______,    _______,    _______,    _______,    _______,                               KC_EXLM,    KC_1,       KC_2,       KC_3,    KC_BSLS,
-                                _______,    _______,    _______,                               _______,    KC_0,       _______
+                                _______,    _______,    _______,                               _______,    KC_0,       KC_UNDS
     ),
     [NAV] = LAYOUT_garrett361(
         _______,    _______,    _______,    _______,    _______,                               KC_HOME,    KC_PGDN,    KC_PGUP,    KC_END,     _______,
         _______,    _______,    _______,    _______,    _______,                               KC_LEFT,    KC_DOWN,    KC_UP,      KC_RGHT,    KC_TILD,
-        _______,    _______,    _______,    _______,    _______,                               KC_PIPE,    KC_PERC,    KC_CIRC,    KC_DLR,     CW_TOGG,
+        _______,    _______,    _______,    _______,    _______,                               KC_PIPE,    KC_PERC,    KC_CIRC,    KC_DLR,     _______,
                                 _______,    _______,    _______,                               _______,    _______,    _______
     ),
     [SYM_1] = LAYOUT_garrett361(
         _______,    KC_PPLS,    KC_PEQL,    KC_PMNS,    KC_PAST,                               _______,    _______,    _______,    _______,    _______,
-        KC_AT,      KC_COLN,    KC_LPRN,    KC_RPRN,    KC_SCLN,                               _______,    _______,    _______,    _______,    _______,
-        KC_LCBR,    KC_RCBR,    KC_LBRC,    KC_RBRC,    _______,                               _______,    _______,    _______,    _______,    _______,
+        KC_LCBR,    KC_COLN,    KC_LPRN,    KC_RPRN,    KC_SCLN,                               _______,    _______,    _______,    _______,    _______,
+        KC_RCBR,    KC_AT,      KC_LBRC,    KC_RBRC,    _______,                               _______,    _______,    _______,    _______,    _______,
                                 _______,    KC_DEL,     _______,                               _______,    _______,    _______
     ),
     [MOUSE] = LAYOUT_garrett361(
