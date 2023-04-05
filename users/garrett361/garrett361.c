@@ -7,8 +7,6 @@
 #define THUMB_5 KC_SPC
 #define THUMB_6 LT(SYM_1, KC_TAB)
 
-enum layers {QWERTY, NUM, NAV, SYM_1, MOUSE, BOOT_1, BOOT_2};
-
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [QWERTY] = LAYOUT_garrett361(
