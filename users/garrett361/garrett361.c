@@ -7,6 +7,7 @@
 #define THUMB_5 KC_SPC
 #define THUMB_6 LT(SYM_1, KC_TAB)
 
+enum layers {QWERTY, NUM, NAV, SYM_1, MOUSE, BOOT_1, BOOT_2};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [QWERTY] = LAYOUT_garrett361(
@@ -16,8 +17,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         THUMB_1,      THUMB_2,      THUMB_3,                                                        THUMB_4,     THUMB_5,      THUMB_6
     ),
     [NUM] = LAYOUT_garrett361(
-        _______,    _______,    _______,    _______,    _______,                               KC_HASH,    KC_7,       KC_8,       KC_9,    _______,
-        _______,    _______,    _______,    _______,    _______,                               KC_GRV,     KC_4,       KC_5,       KC_6,    CW_TOGG,
+        _______,    _______,    _______,    _______,    _______,                               KC_GRV,     KC_7,       KC_8,       KC_9,    CW_TOGG,
+        _______,    _______,    _______,    _______,    _______,                               KC_UNDS,    KC_4,       KC_5,       KC_6,    KC_PMNS,
         _______,    _______,    _______,    _______,    _______,                               KC_EXLM,    KC_1,       KC_2,       KC_3,    KC_BSLS,
                                 _______,    _______,    _______,                               _______,    KC_0,       _______
     ),
@@ -30,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [SYM_1] = LAYOUT_garrett361(
         _______,    KC_PPLS,    KC_PEQL,    KC_PAST,    KC_AMPR,                               _______,    _______,    _______,    _______,    _______,
         KC_LCBR,    KC_COLN,    KC_LPRN,    KC_RPRN,    KC_SCLN,                               _______,    _______,    _______,    _______,    _______,
-        KC_RCBR,    KC_AT,      KC_LBRC,    KC_RBRC,    _______,                               _______,    _______,    _______,    _______,    _______,
+        KC_RCBR,    KC_AT,      KC_LBRC,    KC_RBRC,    KC_HASH,                               _______,    _______,    _______,    _______,    _______,
                                 _______,    KC_DEL,     _______,                               _______,    _______,    _______
     ),
     [MOUSE] = LAYOUT_garrett361(
