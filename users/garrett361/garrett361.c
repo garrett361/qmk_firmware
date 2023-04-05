@@ -1,5 +1,4 @@
 #include QMK_KEYBOARD_H
-#include "features/achordion.h"
 
 #define THUMB_1 LT(NAV, KC_ENT)
 #define THUMB_2 LT(NUM, KC_BSPC)
@@ -10,20 +9,6 @@
 
 enum layers {QWERTY, NUM, NAV, SYM_1, MOUSE, BOOT_1, BOOT_2};
 
-enum combos {
-  THUMB_PMNS,
-  THUMB_UNDS,
-  COMBO_LENGTH
-};
-uint16_t COMBO_LEN = COMBO_LENGTH; // remove the COMBO_COUNT define and use this instead!
-
-const uint16_t PROGMEM pmns_combo[] = {THUMB_5, THUMB_2, COMBO_END};
-const uint16_t PROGMEM unds_combo[] = {THUMB_5, THUMB_1, COMBO_END};
-
-combo_t key_combos[] = {
-  [THUMB_PMNS] = COMBO(pmns_combo, KC_PMNS),
-  [THUMB_UNDS] = COMBO(unds_combo, KC_UNDS),
-};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [QWERTY] = LAYOUT_garrett361(
