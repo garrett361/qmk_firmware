@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 _______,    _______,    _______,                               _______,    _______,    _______
     ),
     [SYM_1] = LAYOUT_garrett361(
-        _______,    KC_AMPR,    KC_LCBR,    KC_RCBR,    _______,                               _______,    _______,    _______,    _______,    _______,
+        KC_ESC,     KC_AMPR,    KC_LCBR,    KC_RCBR,    _______,                               _______,    _______,    _______,    _______,    _______,
         KC_HASH,    KC_COLN,    KC_LPRN,    KC_RPRN,    KC_SCLN,                               _______,    _______,    _______,    _______,    _______,
         KC_EXLM,    KC_AT,      KC_LBRC,    KC_RBRC,    KC_PIPE,                                _______,    _______,    _______,    _______,    _______,
                                 _______,    KC_DEL,     _______,                               _______,    _______,    _______
