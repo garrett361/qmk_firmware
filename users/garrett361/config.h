@@ -38,8 +38,8 @@
 
 // Bilateral Combinations, as implemented by https://github.com/qmk/qmk_firmware/compare/master...sunaku:miryoku_bilateral#files_bucket
 #define BILATERAL_COMBINATIONS
-#define BILATERAL_COMBINATIONS_ALLOW_CROSSOVER_AFTER 20   /* ms */
-#define BILATERAL_COMBINATIONS_ALLOW_SAMESIDED_AFTER 250 /* ms */
+#define BILATERAL_COMBINATIONS_ALLOW_CROSSOVER_AFTER 10   /* ms */
+#define BILATERAL_COMBINATIONS_ALLOW_SAMESIDED_AFTER 100 /* ms */
 #define BILATERAL_COMBINATIONS_TYPING_STREAK_TIMEOUT 150  /* ms */
 #define BILATERAL_COMBINATIONS_TYPING_STREAK_MODMASK (~MOD_MASK_SHIFT)
 
