@@ -10,6 +10,7 @@
 #define THUMB_6 KC_SPC
 
 enum layers {QWERTY, NUM, NAV, SYM_1, MOUSE, BOOT_1, BOOT_2};
+#define AUTO_MOUSE_DEFAULT_LAYER 4
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [QWERTY] = LAYOUT_garrett361_wylder_trackball(
@@ -56,22 +57,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 };
 
-#ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
-void pointing_device_init_user(void) {
-    set_auto_mouse_enable(true);
-}
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case WYLD_AUTO_MS_TOG:
-            if (record->event.pressed) {
-                set_auto_mouse_enable(!get_auto_mouse_enable());
-            }
-            return false; // Skip all further processing of this key
-        default:
-            return true; // Process all other keycodes normally
+#ifndef POINTING_DEVICE_AUTO_MOUSE_ENABLE
+#define POINTING_DEVICE_AUTO_MOUSE_ENABLE
+    void pointing_device_init_user(void) {
+        set_auto_mouse_enable(true);
     }
-}
 #endif
 
 /* Encoder behavior */
@@ -79,26 +69,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #if defined(ENCODER_MAP_ENABLE)
 // TWO ENCODERS
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [_QWERTY] =  { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
-    [_LOWER] =   { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN) },
-    [_RAISE] =   { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN) },
-    [_MOUSE] =   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) }
+    [QWERTY] =  { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [NUM] =   { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN) },
+    [NAV] =   { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN) },
+    [SYM_1] =   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) }
 };
 #endif
 
-void keyboard_post_init_user(void) {
-#ifdef CONSOLE_ENABLE
-    debug_enable=true;
-    debug_matrix=true;
-    debug_keyboard=true;
-    debug_mouse=true;
-#else
-    debug_enable=false;
-    debug_matrix=false;
-    debug_keyboard=false;
-    debug_mouse=false;
-#endif
-}
 
 
 // clang-format on
