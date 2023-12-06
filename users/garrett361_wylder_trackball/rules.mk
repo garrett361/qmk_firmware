@@ -1,0 +1,32 @@
+MOUSEKEY_ENABLE = yes
+EXTRAKEY_ENABLE = yes
+AUTO_SHIFT_ENABLE = no
+TAP_DANCE_ENABLE = no
+
+CAPS_WORD_ENABLE = yes
+COMMAND_ENABLE = no
+
+KEY_OVERRIDE_ENABLE = yes
+
+INTROSPECTION_KEYMAP_C = garrett361.c
+
+DEFERRED_EXEC_ENABLE = yes
+
+# From wylder below
+
+MCU = RP2040
+SPLIT_KEYBOARD = yes
+BOOTLOADER = rp2040
+SERIAL_DRIVER = vendor
+RGBLIGHT_ENABLE = no
+MOUSEKEY_ENABLE = yes
+CONSOLE_ENABLE = no
+NKRO_ENABLE = yes           # Enable N-Key Rollover
+
+OLED_ENABLE = no
+WPM_ENABLE = yes
+EXTRAKEY_ENABLE = yes       # Audio control and System control
+
+ENCODER_ENABLE = yes
+ENCODER_MAP_ENABLE = yes
+

@@ -1,25 +1,8 @@
-// Copyright 2022 Manna Harbour
-// https://github.com/manna-harbour/miryoku
+/* SPDX-License-Identifier: GPL-2.0-or-later */
 
-// This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
-#define XXX KC_NO
+#define VIAL_KEYBOARD_UID {0x61, 0xC2, 0x67, 0x3C, 0x1C, 0x2C, 0xA7, 0x57}
 
-// For the CustomErgoBoard DM with the triangle three thumb cluster, it is more comfortable to have
-// the usually-middle thumb key map to the top thumb key, hence reversed numbering on some thumbs.
-#define LAYOUT_garrett361(\
-     K00, K01, K02, K03, K04,                         K05, K06, K07, K08, K09, \
-     K10, K11, K12, K13, K14,                         K15, K16, K17, K18, K19, \
-     K20, K21, K22, K23, K24,                         K25, K26, K27, K28, K29, \
-               K32, K33, K34,                         K35, K36, K37           \
-) \
-LAYOUT( \
-XXX, K00, K01, K02, K03, K04,                         K05, K06, K07, K08, K09, XXX, \
-XXX, K10, K11, K12, K13, K14,                         K15, K16, K17, K18, K19, XXX, \
-XXX, K20, K21, K22, K23, K24,                         K25, K26, K27, K28, K29, XXX, \
-          XXX, XXX,                                             XXX, XXX, \
-                    XXX, XXX,                         XXX, XXX, \
-                              K33, K34,     K35, K36, \
-                              XXX, K32,     K37, XXX \
-)
+#define VIAL_UNLOCK_COMBO_ROWS { 0, 3 }
+#define VIAL_UNLOCK_COMBO_COLS { 0, 3 }
