@@ -12,7 +12,6 @@
 /* To enter boot mode for either half: successively hold thumb keys from outside in */
 
 enum layers {QWERTY, NUM, NAV, SYM_1, MOUSE, BOOT_1, BOOT_2};
-#define AUTO_MOUSE_DEFAULT_LAYER 4
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [QWERTY] = LAYOUT_split_3x5_3(
@@ -68,13 +67,13 @@ void pointing_device_init_user(void) {
 #if defined(ENCODER_MAP_ENABLE)
 // TWO ENCODERS
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [QWERTY] =  { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [QWERTY] =  { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN) },
     [NUM] =   { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN) },
     [NAV] =   { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN) },
-    [SYM_1] =   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
-    [MOUSE] =   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
-    [BOOT_1] =   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
-    [BOOT_2] =   { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) }
+    [SYM_1] =   { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN) },
+    [MOUSE] =   { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN) },
+    [BOOT_1] =   { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN) },
+    [BOOT_2] =   { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN) }
 };
 #endif
 
