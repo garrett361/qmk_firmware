@@ -12,7 +12,6 @@
 /* To enter boot mode for either half: successively hold thumb keys from outside in */
 
 enum layers {QWERTY, NUM, NAV, SYM_1, MOUSE, BOOT_1, BOOT_2};
-#undef AUTO_MOUSE_DEFAULT_LAYER
 #define AUTO_MOUSE_DEFAULT_LAYER 4
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -60,12 +59,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 };
 
-#ifndef POINTING_DEVICE_AUTO_MOUSE_ENABLE
-#define POINTING_DEVICE_AUTO_MOUSE_ENABLE
-    void pointing_device_init_user(void) {
-        set_auto_mouse_enable(true);
-    }
-#endif
+void pointing_device_init_user(void) {
+    set_auto_mouse_enable(true);
+}
 
 /* Encoder behavior */
 
