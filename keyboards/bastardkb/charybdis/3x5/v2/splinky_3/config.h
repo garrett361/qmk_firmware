@@ -24,6 +24,7 @@
     { GP28, GP21, GP6, GP7, GP8 }
 
 /* Handedness. */
+/* NOTE: @garrett.goon - originally this was MASTER_RIGHT */
 #define MASTER_RIGHT
 
 // To use the handedness pin, resistors need to be installed on the adapter PCB.
