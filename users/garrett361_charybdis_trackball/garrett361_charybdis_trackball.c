@@ -36,9 +36,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 _______,    KC_DEL,     _______,                               _______,    _______,    _______
     ),
     [MOUSE] = LAYOUT_garrett361_charybdis_trackball(
+        _______,    _______,    _______,    SNIPING,    DRG_TOG,                               _______,    _______,    _______,    _______,    _______,
         _______,    _______,    _______,    _______,    _______,                               _______,    _______,    _______,    _______,    _______,
-        _______,    _______,    _______,    _______,    _______,                               _______,    _______,    _______,    _______,    _______,
-        _______,    _______,    SNP_TOG,    DRG_TOG,    _______,                              _______,    _______,    _______,    _______,    _______,
+        _______,    _______,    _______,    _______,    _______,                              _______,    _______,    _______,    _______,    _______,
                                 KC_BTN2,    KC_BTN1,    KC_BTN3,                               _______,    _______,    _______
     ),
     [BOOT_1] = LAYOUT_garrett361_charybdis_trackball(
@@ -62,9 +62,9 @@ void pointing_device_init_user(void) {
 }
 #endif
 
-// Disable mouse movement for 1.5 seconds after typing anything apart from mouse-related keys
+// Disable mouse movement for mouse_delay_ms after typing anything apart from mouse-related keys
 
-unsigned int mouse_delay_ms = 1500;
+unsigned int mouse_delay_ms = 1250;
 
 uint16_t key_timer = 0;
 
@@ -74,6 +74,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         keycode != KC_BTN3 &&
         keycode != DRG_TOG &&
         keycode != SNP_TOG &&
+        keycode != SNIPING &&
+        keycode != DRGSCRL &&
         record->event.pressed) { key_timer = timer_read();}
     return true;
 }
